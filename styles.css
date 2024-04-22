@@ -4,49 +4,62 @@ body, html {
     font-family: 'EB Garamond', serif;
     background-color: #0D1431;
     color: #CDDEF2;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
+    overflow: hidden;
+    background-image: url('Web-browser.png'); /* Use the repeated pattern */
+    background-size: cover;
 }
 
 #slider {
-    white-space: nowrap;
+    display: flex;
     transition: transform 0.5s ease;
-    font-size: 0; /* Removes whitespace between inline-block elements */
+    width: 200vw; /* Assuming you have two slides */
 }
 
 .slide {
-    display: inline-block;
-    font-size: 16px; /* Reset font size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100vw;
     height: 100vh;
-    vertical-align: top;
-    text-align: center;
 }
 
 .container {
-    display: inline-block;
-    padding: 1em;
     background-color: #1c1c1e;
+    padding: 20px;
     border-radius: 10px;
-    margin-top: 2em;
+    width: auto; /* Adjust width as necessary, or remove for automatic width */
+    max-width: 300px; /* Adjust based on design preference */
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .title {
-    margin-bottom: 0.5em;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 .output, .input {
-    margin: 0.5em 0;
-    padding: 0.5em;
+    background-color: #5b697a;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .button {
-    padding: 0.5em 1em;
-    margin: 0.5em 0;
     background-color: #484C77;
+    color: #CDDEF2;
+    padding: 10px 20px;
     border: none;
     border-radius: 10px;
-    color: #CDDEF2;
+    margin-bottom: 20px;
+    cursor: pointer;
+    width: 100%;
 }
 
 .caption {
@@ -54,13 +67,13 @@ body, html {
 }
 
 #prev, #next {
-    cursor: pointer;
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
     background-color: #ccc;
     border: none;
-    padding: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
 }
 
 #prev { left: 10px; }
