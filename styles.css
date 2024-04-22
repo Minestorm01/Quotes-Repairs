@@ -2,65 +2,66 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'EB Garamond', serif;
-    overflow-x: hidden; // Prevent horizontal scrolling
+    background-color: #0D1431;
+    color: #CDDEF2;
+    overflow: hidden;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #slider {
-    display: flex;
-    width: 200vw; // Adjust this if you have more than two slides
+    white-space: nowrap;
+    transition: transform 0.5s ease;
+    font-size: 0; /* Removes whitespace between inline-block elements */
 }
 
 .slide {
+    display: inline-block;
+    font-size: 16px; /* Reset font size */
     width: 100vw;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    height: 100vh;
+    vertical-align: top;
     text-align: center;
-    padding: 20px;
-}
 }
 
 .container {
-    background-color: #1c1c1e; /* Container background color */
-    padding: 20px;
-    border-radius: 20px;
-    width: 90%;
-    max-width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    padding: 1em;
+    background-color: #1c1c1e;
+    border-radius: 10px;
+    margin-top: 2em;
 }
 
-.title, .output, .input, .button, .caption {
-    color: #CDDEF2;
-    margin: 10px;
+.title {
+    margin-bottom: 0.5em;
 }
 
-.input, .button {
-    padding: 10px;
-    width: 100%;
-    box-sizing: border-box;
+.output, .input {
+    margin: 0.5em 0;
+    padding: 0.5em;
 }
 
 .button {
-    background-color: #484C77; /* Button background color */
+    padding: 0.5em 1em;
+    margin: 0.5em 0;
+    background-color: #484C77;
     border: none;
     border-radius: 10px;
+    color: #CDDEF2;
 }
 
-#next {
+.caption {
+    font-size: 0.8em;
+}
+
+#prev, #next {
+    cursor: pointer;
     position: fixed;
     top: 50%;
-    right: 20px;
     transform: translateY(-50%);
-    font-size: 24px;
-    cursor: pointer;
     background-color: #ccc;
     border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
+    padding: 10px;
 }
+
+#prev { left: 10px; }
+#next { right: 10px; }
