@@ -2,19 +2,16 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'EB Garamond', serif;
-    background-color: #0D1431; /* Dark blue background */
-    color: #CDDEF2; /* Light blue text color */
+    overflow-x: hidden; // Prevent horizontal scrolling
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    overflow-x: hidden;
 }
 
 #slider {
     display: flex;
-    width: 200vw; // Ensure this is exactly twice the width of the viewport if there are two slides
-    transition: transform 0.5s ease;
+    width: 200vw; // Adjust this if you have more than two slides
 }
 
 .slide {
