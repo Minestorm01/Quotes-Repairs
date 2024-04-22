@@ -7,21 +7,29 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="slider" style="min-height: 100vh; display: flex; overflow: hidden;">
-        <section class="slide" style="width: 100vw; flex-shrink: 0; background: #fafafa; padding: 20px;">
-            <h1>Dana-Quote Calculator</h1>
-            <!-- Placeholder for Dana-Quote content -->
-            <input type="number" placeholder="Enter Dana quote">
-            <button>Calculate Dana</button>
-        </section>
-        <section class="slide" style="width: 100vw; flex-shrink: 0; background: #eef; padding: 20px;">
-            <h1>Watch-Quotes Calculator</h1>
-            <!-- Placeholder for Watch-Quotes content -->
-            <input type="number" placeholder="Enter Watch quote">
-            <button>Calculate Watch</button>
-        </section>
+   <section class="slide">
+    <h1>Dana-Quote Calculator</h1>
+    <!-- Insert the actual form or content for Dana-Quote here -->
+    <div class="container">
+        <div class="title">Dana Quote Calculator</div>
+        <div id="output" class="output">Lets get that Quote!!</div>
+        <input type="text" id="letter1" class="input" placeholder="First Letter">
+        <input type="text" id="letter2" class="input" placeholder="Second Letter">
+        <button id="calculateButton" class="button">Calculate</button>
     </div>
-    <button id="next" style="position: fixed; bottom: 20px; right: 20px;">Next</button>
+</section>
+        <section class="slide">
+    <h1>Watch Quotes Calculator</h1>
+    <div class="container">
+        <div class="title">Watch Quotes Calculator</div>
+        <div id="output" class="output">Your quote will appear here!</div>
+        <input type="number" id="quoteInput" class="input" placeholder="Enter quote amount">
+        <button id="calculateButton" class="button">Calculate</button>
+        <p class="caption">In POS, type SKU 9049116 for watch repair quotes.</p>
+    </div>
+</section>
+    </div>
+    <button id="next">&#10095;</button>
     <script src="script.js"></script>
 </body>
 </html>
