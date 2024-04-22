@@ -1,36 +1,103 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    font-family: 'EB Garamond', serif;
+    background-color: #0D1431; /* Dark blue background, common setting */
+    background-image: url('Web-browser.png'); /* Default background image */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; /* Scales the background image */
+    color: #CDDEF2; /* Light blue text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+@media (min-width: 768px) {
+    body, html {
+        background-attachment: fixed; /* Smooth parallax background effect on desktop */
+    }
+}
+
+/* Specific adjustments for mobile devices */
+@media only screen and (max-device-width: 812px) {
+    body, html {
+        background-image: url('Iphone-926x428.png'); /* Specific image for iPhones */
+    }
 }
 
 #slider {
     display: flex;
-    width: 200vw; /* Two slides, 100% each */
-    transition: transform 0.5s ease; /* Smooth transition for sliding effect */
+    transition: transform 0.5s ease; /* Transition for sliding effect */
+    width: 200vw; /* Assuming two slides */
 }
 
 .slide {
-    flex-shrink: 0;
     width: 100vw;
+    flex-shrink: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
     padding: 20px;
-    box-sizing: border-box; /* Include padding in width calculation */
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    max-width: 300px;
+    background-color: #1c1c1e; /* Solid background color for container */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.title {
+    font-size: 24px; /* Standardized font size */
+    margin-bottom: 20px;
+    color: #CDDEF2; /* Light blue text color */
+}
+
+.output, .input {
+    background-color: #5b697a; /* Color for input and output boxes */
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    color: #CDDEF2; /* Consistent text color */
+}
+
+.button {
+    background-color: #484C77; /* Button background color */
+    font-family: 'EB Garamond', serif;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    color: #CDDEF2;
+}
+
+.caption {
+    font-size: 0.8em;
+    margin-top: 20px;
 }
 
 #next {
     position: fixed;
-    top: 50%; /* Center vertically */
-    right: 20px; /* Place on the right side */
-    transform: translateY(-50%); /* Adjust vertical position to be centered */
-    padding: 10px 20px;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 24px;
     cursor: pointer;
     background-color: #ccc;
     border: none;
     border-radius: 5px;
-    font-size: 24px; /* Larger font size for better visibility */
+    padding: 10px 20px;
 }
+
