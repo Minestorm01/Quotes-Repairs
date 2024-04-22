@@ -1,79 +1,81 @@
 body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'EB Garamond', serif;
-    background-color: #0D1431;
-    color: #CDDEF2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-    background-image: url('Web-browser.png'); /* Use the repeated pattern */
-    background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: 'EB Garamond', serif;
+  background-color: #0D1431;
+  color: #CDDEF2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url('Web-browser.png'); /* Assuming this is the repeating pattern */
+  background-size: cover;
 }
 
 #slider {
-    display: flex;
-    transition: transform 0.5s ease;
-    width: 200vw; /* Assuming you have two slides */
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 200vw; /* Adjust if you have more than two slides */
 }
 
 .slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
-    background-color: #1c1c1e;
-    padding: 20px;
-    border-radius: 10px;
-    width: auto; /* Adjust width as necessary, or remove for automatic width */
-    max-width: 300px; /* Adjust based on design preference */
-    margin: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  background-color: #1c1c1e;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%; /* Set to a percentage of the slide width */
+  max-width: 300px; /* Adjust max-width for design preference */
+  margin: auto; /* This will center the container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  text-align: center; /* Center text inside the container */
 }
 
 .title {
-    font-size: 24px;
-    margin-bottom: 20px;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
 .output, .input {
-    background-color: #5b697a;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    width: 100%;
-    box-sizing: border-box;
+  background-color: #5b697a;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  width: calc(100% - 30px); /* Account for padding */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .button {
-    background-color: #484C77;
-    color: #CDDEF2;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    cursor: pointer;
-    width: 100%;
+  background-color: #484C77;
+  color: #CDDEF2;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%; /* Button fills the container width */
 }
 
 .caption {
-    font-size: 0.8em;
+  font-size: 0.8em;
+  color: #CDDEF2;
 }
 
 #prev, #next {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #ccc;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ccc;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 10; /* Make sure arrows are above other content */
 }
 
 #prev { left: 10px; }
