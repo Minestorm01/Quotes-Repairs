@@ -13,7 +13,7 @@ body, html {
 
 #slider {
     display: flex;
-    width: 200vw; /* Two slides */
+    width: 200vw; // Ensure this is exactly twice the width of the viewport if there are two slides
     transition: transform 0.5s ease;
 }
 
@@ -26,6 +26,7 @@ body, html {
     justify-content: center;
     text-align: center;
     padding: 20px;
+}
 }
 
 .container {
