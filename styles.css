@@ -4,19 +4,19 @@ body, html {
   font-family: 'EB Garamond', serif;
   background-color: #0D1431;
   color: #CDDEF2;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   overflow: hidden;
-  background-image: url('Web-browser.png'); /* Assuming this is the repeating pattern */
+  background-image: url('Web-browser.png');
   background-size: cover;
 }
 
 #slider {
   display: flex;
   transition: transform 0.5s ease;
-  width: 200vw; /* Adjust if you have more than two slides */
+  width: 200vw; /* Assuming you have two slides */
 }
 
 .slide {
@@ -31,11 +31,10 @@ body, html {
   background-color: #1c1c1e;
   padding: 20px;
   border-radius: 10px;
-  width: 90%; /* Set to a percentage of the slide width */
-  max-width: 300px; /* Adjust max-width for design preference */
-  margin: auto; /* This will center the container */
+  width: auto;
+  max-width: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  text-align: center; /* Center text inside the container */
+  text-align: center;
 }
 
 .title {
