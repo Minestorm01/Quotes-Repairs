@@ -14,29 +14,29 @@ body, html {
 }
 
 #slider {
-    display: flex;
-    transition: transform 0.5s ease;
-    width: 200vw;
-    height: 100vh;
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 200vw; /* Adjust if you have more than two slides */
+  overflow: hidden; /* Ensure slider content doesn't overflow */
 }
 
 .slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+  width: 100vw; /* Each slide should be the full width of the viewport */
+  height: 100vh; /* Each slide should be the full height of the viewport */
+  display: flex; /* Use flexbox to center the content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
 .container {
-    background-color: #1c1c1e;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 300px;
-    width: auto;
-    margin: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    text-align: center;
+  background-color: #1c1c1e;
+  padding: 20px;
+  border-radius: 10px;
+  width: auto; /* Let the width be determined by its content, up to max-width */
+  max-width: 300px; /* Adjust max-width based on design preference */
+  margin: auto; /* Center in the available space */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  text-align: center; /* Center text inside the container */
 }
 
 .title, .output, .input, .button, .caption {
