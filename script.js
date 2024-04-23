@@ -1,14 +1,34 @@
 let currentSlide = 0;
 const slider = document.getElementById('slider');
 const slides = document.querySelectorAll('.slide');
+const prevArrow = document.getElementById('prev');
+const nextArrow = document.getElementById('next');
 
-// Function to move the slider left or right
+// Function to move the slider and manage arrow visibility
 function moveSlide(direction) {
     currentSlide = (currentSlide + direction + slides.length) % slides.length;
     const offset = -currentSlide * 100;
     slider.style.transform = `translateX(${offset}vw)`;
+    
+    // Toggle arrow visibility
+    if (currentSlide === 0) {
+        prevArrow.style.display = 'none';
+        nextArrow.style.display = 'block';
+    } else if (currentSlide === slides.length - 1) {
+        prevArrow.style.display = 'block';
+        nextArrow.style.display = 'none';
+    } else {
+        prevArrow.style.display = 'block';
+        nextArrow.style.display = 'block';
+    }
 }
 
+// Initial setup for arrows on first slide
+document.addEventListener('DOMContentLoaded', function() {
+    slider.style.transform = 'translateX(0vw)';
+    prevArrow.style.display = 'none';
+    nextArrow.style.display = slides.length > 1 ? 'block' : 'none';
+});
 // Dana Quotes calculation
 function calculateDana() {
     const letterToNumber = {
