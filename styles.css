@@ -5,38 +5,33 @@ body, html {
   background-color: #0D1431;
   color: #CDDEF2;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
-  background-image: url('Web-browser.png');
-  background-size: cover;
 }
 
 #slider {
   display: flex;
   transition: transform 0.5s ease;
   width: 200vw; /* Assuming you have two slides */
+  height: 100vh; /* Ensure the slider has the same height as the viewport */
 }
 
 .slide {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100vw; /* Each slide should be the full width of the viewport */
+  height: 100vh; /* Each slide should be the full height of the viewport */
+  display: flex; /* Use flexbox to center the content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
 .container {
   background-color: #1c1c1e;
   padding: 20px;
   border-radius: 10px;
-  width: auto;
-  max-width: 300px;
+  max-width: 300px; /* Control the maximum width of the container */
+  width: auto; /* Let the width be determined by its content, up to max-width */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  text-align: center;
+  text-align: center; /* Center text inside the container */
 }
-
 .title {
   font-size: 24px;
   margin-bottom: 20px;
