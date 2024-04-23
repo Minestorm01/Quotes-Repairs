@@ -29,14 +29,14 @@ body, html {
 }
 
 .container {
-    background-color: #1c1c1e;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 300px;
-    width: auto;
-    margin: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    text-align: center;
+  background-color: #1c1c1e;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 300px; /* Control the maximum width of the container */
+  width: auto; /* Let the width be determined by its content, up to max-width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  text-align: center; /* Center text inside the container */
+}
 }
 
 .title, .output, .input, .button, .caption {
