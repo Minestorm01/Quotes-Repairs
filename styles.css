@@ -1,76 +1,88 @@
 body, html {
-  margin: 0;
-  padding: 0;
-  font-family: 'EB Garamond', serif;
-  background-color: #0D1431;
-  color: #CDDEF2;
-  height: 100vh;
-  overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'EB Garamond', serif;
+    background-color: #0D1431;
+    color: #CDDEF2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('Web-browser.png');
+    background-size: cover;
 }
 
 #slider {
-  display: flex;
-  transition: transform 0.5s ease;
-  width: 200vw; /* Assuming you have two slides */
-  height: 100vh; /* Ensure the slider has the same height as the viewport */
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 200vw;
+    height: 100vh;
 }
 
 .slide {
-  width: 100vw; /* Each slide should be the full width of the viewport */
-  height: 100vh; /* Each slide should be the full height of the viewport */
-  display: flex; /* Use flexbox to center the content */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
 
 .container {
-  background-color: #1c1c1e;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 300px; /* Control the maximum width of the container */
-  width: auto; /* Let the width be determined by its content, up to max-width */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  text-align: center; /* Center text inside the container */
-}
-.title {
-  font-size: 24px;
-  margin-bottom: 20px;
+    background-color: #1c1c1e;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    width: auto;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
 
-.output, .input {
-  background-color: #5b697a;
-  padding: 15px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  width: calc(100% - 30px); /* Account for padding */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+.title, .output, .input, .button, .caption {
+    font-family: 'EB Garamond', serif;
+    color: #CDDEF2;
+}
+
+.input, .button {
+    margin: 0.5em 0;
+    padding: 0.5em;
+    border: 1px solid #CDDEF2; /* Border color */
+    background-color: #0D1431; /* Background color */
+    border-radius: 10px;
 }
 
 .button {
-  background-color: #484C77;
-  color: #CDDEF2;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  width: 100%; /* Button fills the container width */
-}
-
-.caption {
-  font-size: 0.8em;
-  color: #CDDEF2;
+    background-color: #484C77;
+    padding: 10px 20px;
+    width: 100%; /* Button fills the container width */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 #prev, #next {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #ccc;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  z-index: 10; /* Make sure arrows are above other content */
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #CDDEF2;
+    font-size: 2em;
 }
 
-#prev { left: 10px; }
-#next { right: 10px; }
+#prev { 
+    left: 10px;
+    display: none; /* Start with the left arrow hidden */
+}
+
+#next { 
+    right: 10px;
+}
+
+/* Hide the non-active arrow on click */
+.slide:not(.active) .arrow {
+    display: none;
+}
+
